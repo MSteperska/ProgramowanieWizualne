@@ -13,14 +13,33 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
-        
+        DateTime start;
+        TimeSpan ts;
         public Form2()
         {
             InitializeComponent();
         }
-        private void label2_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-            label2.Text = DateTime.
+            start = new DateTime(DateTime.Now.Ticks);
+            timer1.Enabled = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        { 
+            ts = DateTime.Now - start;
+            label2.Text = ts.ToString();
         }
     }
     

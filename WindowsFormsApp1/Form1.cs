@@ -17,15 +17,27 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public void SetPrice(double price)
         {
-            label1.Text = DateTime.Now.ToString("HH:mm:ss");
+            label1.Text = price.ToString();
+        }
+                      
+        private void button1_Click_1(object sender, EventArgs e) //komputer
+        {
+            Form2 form= new Form2(this);
+            form.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+        private void button3_Click(object sender, EventArgs e) //monitor
         {
-            Form2 form= new Form2();
-            form .ShowDialog();
+            Form3 form = new Form3();
+            form.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e) 
+        {
+           
         }
     }
 }

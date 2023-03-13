@@ -1,0 +1,4 @@
+3 okienka
+1- 3 przyciski (komputer- nowe okno , monitor- , cena- )
+2- po wciśnięciu komputer - 
+3- list view- typ i średnica monitora

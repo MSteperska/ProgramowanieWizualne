@@ -21,4 +21,3 @@ M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.p
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources

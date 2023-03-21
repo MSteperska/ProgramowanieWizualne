@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+    
     public partial class Form2 : Form
     {
         Form1 okno;
@@ -62,7 +63,7 @@ namespace WindowsFormsApp1
 
         private void Accept_button_Click(object sender, EventArgs e)
         {
-            okno.Set_data(title, author, genres, stars, price); //zatwierdzanie zmian??
+            okno.Set_data(title, author, genres, stars, price);
             this.Close();
         }
 

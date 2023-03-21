@@ -53,33 +53,38 @@
             // 
             // Remove_button
             // 
-            this.Remove_button.Location = new System.Drawing.Point(283, 399);
+            this.Remove_button.Location = new System.Drawing.Point(231, 399);
             this.Remove_button.Name = "Remove_button";
             this.Remove_button.Size = new System.Drawing.Size(97, 35);
             this.Remove_button.TabIndex = 1;
             this.Remove_button.Text = "REMOVE";
             this.Remove_button.UseVisualStyleBackColor = true;
+            this.Remove_button.Click += new System.EventHandler(this.Remove_button_Click);
             // 
             // Save_button
             // 
-            this.Save_button.Location = new System.Drawing.Point(457, 399);
+            this.Save_button.Location = new System.Drawing.Point(573, 399);
             this.Save_button.Name = "Save_button";
             this.Save_button.Size = new System.Drawing.Size(97, 35);
             this.Save_button.TabIndex = 2;
             this.Save_button.Text = "SAVE";
             this.Save_button.UseVisualStyleBackColor = true;
+            this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
             // 
             // Load_button
             // 
-            this.Load_button.Location = new System.Drawing.Point(630, 399);
+            this.Load_button.Location = new System.Drawing.Point(693, 399);
             this.Load_button.Name = "Load_button";
             this.Load_button.Size = new System.Drawing.Size(97, 35);
             this.Load_button.TabIndex = 3;
             this.Load_button.Text = "LOAD";
             this.Load_button.UseVisualStyleBackColor = true;
+            this.Load_button.Click += new System.EventHandler(this.Load_button_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Title,
@@ -101,6 +106,7 @@
             this.Title.HeaderText = "TITLE";
             this.Title.MinimumWidth = 8;
             this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
             this.Title.Width = 150;
             // 
             // Author
@@ -108,6 +114,7 @@
             this.Author.HeaderText = "AUTHOR";
             this.Author.MinimumWidth = 8;
             this.Author.Name = "Author";
+            this.Author.ReadOnly = true;
             this.Author.Width = 150;
             // 
             // Genres
@@ -115,6 +122,7 @@
             this.Genres.HeaderText = "GENRES";
             this.Genres.MinimumWidth = 8;
             this.Genres.Name = "Genres";
+            this.Genres.ReadOnly = true;
             this.Genres.Width = 150;
             // 
             // Stars
@@ -122,6 +130,7 @@
             this.Stars.HeaderText = "STARS";
             this.Stars.MinimumWidth = 8;
             this.Stars.Name = "Stars";
+            this.Stars.ReadOnly = true;
             this.Stars.Width = 150;
             // 
             // Price
@@ -129,6 +138,7 @@
             this.Price.HeaderText = "PRICE";
             this.Price.MinimumWidth = 8;
             this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
             this.Price.Width = 150;
             // 
             // Form1

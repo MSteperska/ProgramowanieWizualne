@@ -1,0 +1,7 @@
+zapis do xml
+odczyt z xml
+wyszukaj --> okienko 
+
+nowe okienko
+
+wpisanie frazy -> znalezienie elementów spełniających warunek

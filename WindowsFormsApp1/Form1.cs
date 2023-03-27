@@ -6,6 +6,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,8 @@ namespace WindowsFormsApp1
     {
         int index;
         int row_counter = 0;
+        public Book book1 = new Book();
+        public List<Book> Book_list;
 
         //save and load 
         private SaveFileDialog sfd;
@@ -25,10 +28,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        public void Set_data(string title, string author, string genres, string stars, string price)
+               
+        public void Set_data()
         {
-            dataGridView1.Rows.Add(title, author, genres, stars, price);
+            Book_list.Add(book1);
+            dataGridView1.Rows.Add(book1);
+            //dataGridView1.Rows.Add(title, author, genres, stars, price);
             row_counter++;
         }
 
@@ -74,7 +79,7 @@ namespace WindowsFormsApp1
                     {
                         for(int i = 0; i < 5; i++)
                         {
-                            full_text += dataGridView1.Rows[j].Cells[i].Value.ToString(); //dzięki Adam :)
+                            full_text += dataGridView1.Rows[j].Cells[i].Value.ToString(); 
                             if(i == 4) {
                                 continue;
                             }
@@ -126,7 +131,16 @@ namespace WindowsFormsApp1
             }
             
         }
-           
-               
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form3 form = new Form3(this);
+            form.ShowDialog();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }

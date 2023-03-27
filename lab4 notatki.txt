@@ -5,3 +5,14 @@ wyszukaj --> okienko
 nowe okienko
 
 wpisanie frazy -> znalezienie elementów spełniających warunek
+
+
+format xml
+
+trzeba sworzyć klasę przechowującą nasze dane w tabeli
+dodanie serializacji danych -> parametr w klasie
+
+databind <- metoda do powiązania (czego?)
+wyszukiwanie po podciągu
+inmediatewindows (???) <- natychmiastowe okno, można uruchomić funkcję bez uruchamiania całego procesu
+

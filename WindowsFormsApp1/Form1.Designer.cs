@@ -30,20 +30,23 @@
         {
             this.Add_button = new System.Windows.Forms.Button();
             this.Remove_button = new System.Windows.Forms.Button();
-            this.Save_button = new System.Windows.Forms.Button();
-            this.Load_button = new System.Windows.Forms.Button();
+            this.SaveCSV_button = new System.Windows.Forms.Button();
+            this.LoadCSV_button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Genres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stars = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Search_button = new System.Windows.Forms.Button();
+            this.SaveXML_button = new System.Windows.Forms.Button();
+            this.LoadXML_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Add_button
             // 
-            this.Add_button.Location = new System.Drawing.Point(112, 399);
+            this.Add_button.Location = new System.Drawing.Point(110, 399);
             this.Add_button.Name = "Add_button";
             this.Add_button.Size = new System.Drawing.Size(97, 35);
             this.Add_button.TabIndex = 0;
@@ -53,7 +56,7 @@
             // 
             // Remove_button
             // 
-            this.Remove_button.Location = new System.Drawing.Point(231, 399);
+            this.Remove_button.Location = new System.Drawing.Point(110, 453);
             this.Remove_button.Name = "Remove_button";
             this.Remove_button.Size = new System.Drawing.Size(97, 35);
             this.Remove_button.TabIndex = 1;
@@ -61,25 +64,25 @@
             this.Remove_button.UseVisualStyleBackColor = true;
             this.Remove_button.Click += new System.EventHandler(this.Remove_button_Click);
             // 
-            // Save_button
+            // SaveCSV_button
             // 
-            this.Save_button.Location = new System.Drawing.Point(573, 399);
-            this.Save_button.Name = "Save_button";
-            this.Save_button.Size = new System.Drawing.Size(97, 35);
-            this.Save_button.TabIndex = 2;
-            this.Save_button.Text = "SAVE";
-            this.Save_button.UseVisualStyleBackColor = true;
-            this.Save_button.Click += new System.EventHandler(this.Save_button_Click);
+            this.SaveCSV_button.Location = new System.Drawing.Point(450, 390);
+            this.SaveCSV_button.Name = "SaveCSV_button";
+            this.SaveCSV_button.Size = new System.Drawing.Size(129, 52);
+            this.SaveCSV_button.TabIndex = 2;
+            this.SaveCSV_button.Text = "SAVE TO .CSV\r\n";
+            this.SaveCSV_button.UseVisualStyleBackColor = true;
+            this.SaveCSV_button.Click += new System.EventHandler(this.Save_button_Click);
             // 
-            // Load_button
+            // LoadCSV_button
             // 
-            this.Load_button.Location = new System.Drawing.Point(693, 399);
-            this.Load_button.Name = "Load_button";
-            this.Load_button.Size = new System.Drawing.Size(97, 35);
-            this.Load_button.TabIndex = 3;
-            this.Load_button.Text = "LOAD";
-            this.Load_button.UseVisualStyleBackColor = true;
-            this.Load_button.Click += new System.EventHandler(this.Load_button_Click);
+            this.LoadCSV_button.Location = new System.Drawing.Point(610, 390);
+            this.LoadCSV_button.Name = "LoadCSV_button";
+            this.LoadCSV_button.Size = new System.Drawing.Size(134, 52);
+            this.LoadCSV_button.TabIndex = 3;
+            this.LoadCSV_button.Text = "LOAD FROM .CSV";
+            this.LoadCSV_button.UseVisualStyleBackColor = true;
+            this.LoadCSV_button.Click += new System.EventHandler(this.Load_button_Click);
             // 
             // dataGridView1
             // 
@@ -141,14 +144,45 @@
             this.Price.ReadOnly = true;
             this.Price.Width = 150;
             // 
+            // Search_button
+            // 
+            this.Search_button.Location = new System.Drawing.Point(275, 428);
+            this.Search_button.Name = "Search_button";
+            this.Search_button.Size = new System.Drawing.Size(97, 34);
+            this.Search_button.TabIndex = 5;
+            this.Search_button.Text = "SEARCH";
+            this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // SaveXML_button
+            // 
+            this.SaveXML_button.Location = new System.Drawing.Point(450, 463);
+            this.SaveXML_button.Name = "SaveXML_button";
+            this.SaveXML_button.Size = new System.Drawing.Size(129, 54);
+            this.SaveXML_button.TabIndex = 6;
+            this.SaveXML_button.Text = "SAVE TO .XML";
+            this.SaveXML_button.UseVisualStyleBackColor = true;
+            // 
+            // LoadXML_button
+            // 
+            this.LoadXML_button.Location = new System.Drawing.Point(610, 463);
+            this.LoadXML_button.Name = "LoadXML_button";
+            this.LoadXML_button.Size = new System.Drawing.Size(134, 54);
+            this.LoadXML_button.TabIndex = 7;
+            this.LoadXML_button.Text = "LOAD FROM .XML";
+            this.LoadXML_button.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(909, 499);
+            this.ClientSize = new System.Drawing.Size(909, 529);
+            this.Controls.Add(this.LoadXML_button);
+            this.Controls.Add(this.SaveXML_button);
+            this.Controls.Add(this.Search_button);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.Load_button);
-            this.Controls.Add(this.Save_button);
+            this.Controls.Add(this.LoadCSV_button);
+            this.Controls.Add(this.SaveCSV_button);
             this.Controls.Add(this.Remove_button);
             this.Controls.Add(this.Add_button);
             this.Name = "Form1";
@@ -163,13 +197,16 @@
 
         private System.Windows.Forms.Button Add_button;
         private System.Windows.Forms.Button Remove_button;
-        private System.Windows.Forms.Button Save_button;
-        private System.Windows.Forms.Button Load_button;
+        private System.Windows.Forms.Button SaveCSV_button;
+        private System.Windows.Forms.Button LoadCSV_button;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Author;
         private System.Windows.Forms.DataGridViewTextBoxColumn Genres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stars;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.Button Search_button;
+        private System.Windows.Forms.Button SaveXML_button;
+        private System.Windows.Forms.Button LoadXML_button;
     }
 }

@@ -11,15 +11,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Xml.Serialization;
 
 namespace WindowsFormsApp1
 {
+    [Serializable]
     public partial class Form1 : Form
     {
         int index;
         int row_counter = 0;
         public Book book1 = new Book();
-        public List<Book> Book_list;
+        public List<Book> Book_list = new List<Book> ();
 
         //save and load 
         private SaveFileDialog sfd;
@@ -31,8 +33,8 @@ namespace WindowsFormsApp1
                
         public void Set_data()
         {
-            Book_list.Add(book1);
-            dataGridView1.Rows.Add(book1);
+            Book_list.Add(new Book(book1.title, book1.author, book1.genres, book1.stars, book1.price));
+            dataGridView1.Rows.Add(Book_list.Last().title, Book_list.Last().author, Book_list.Last().genres, Book_list.Last().stars, Book_list.Last().price);
             //dataGridView1.Rows.Add(title, author, genres, stars, price);
             row_counter++;
         }
@@ -57,6 +59,7 @@ namespace WindowsFormsApp1
         {
             if(row_counter != 0)
             {
+                Book_list.RemoveAt(index);
                 dataGridView1.Rows.RemoveAt(index);
                 row_counter--;
             }
@@ -66,7 +69,7 @@ namespace WindowsFormsApp1
         private void Save_button_Click(object sender, EventArgs e)
         {
             sfd = new SaveFileDialog();
-            sfd.Filter = ".csv | .csv"; // czy to będzie działać, co jest przed |?
+            sfd.Filter = ".csv | .csv"; 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 string path = sfd.FileName; //tu zapisuje się ścieżka do pliku
@@ -106,11 +109,11 @@ namespace WindowsFormsApp1
 
         private void Load_button_Click(object sender, EventArgs e)
         {
-            string title = "";
-            string author = "";
-            string genres = "";
-            string stars = "";
-            string price = "";
+            //string title = "";
+            //string author = "";
+            //string genres = "";
+            //string stars = "";
+            //string price = "";
             ofd = new OpenFileDialog();
             ofd.ShowDialog();
             if(ofd.ShowDialog() == DialogResult.OK)
@@ -119,12 +122,13 @@ namespace WindowsFormsApp1
                 foreach(string line in System.IO.File.ReadLines(path))
                 {
                     string[] data = line.Split(',');
-                    title = data[0];
-                    author = data[1];
-                    genres = data[2];
-                    stars = data[3];
-                    price = data[4];
-                    dataGridView1.Rows.Add(title, author, genres, stars, price);
+                    book1.title = data[0];
+                    book1.author = data[1];
+                    book1.genres = data[2];
+                    book1.stars = data[3];
+                    book1.price = data[4];
+                    Book_list.Add(new Book(book1.title, book1.author, book1.genres, book1.stars, book1.price));
+                    dataGridView1.Rows.Add(Book_list.Last().title, Book_list.Last().author, Book_list.Last().genres, Book_list.Last().stars, Book_list.Last().price);            
                     row_counter++;
                 }
                
@@ -141,6 +145,55 @@ namespace WindowsFormsApp1
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
+        }
+
+        private void SaveXML_button_Click(object sender, EventArgs e)
+        {            
+            
+            sfd = new SaveFileDialog();
+            sfd.Filter = ".xml | .xml";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                string path = sfd.FileName;
+                if(!File.Exists(path)) 
+                {
+                    XmlSerializer ser = new XmlSerializer(typeof(List<Book>));
+                    StreamWriter writer = new StreamWriter(path);
+                    ser.Serialize(writer, Book_list);
+                    writer.Close();
+                }
+                
+            }
+                
+
+        }
+
+        private void LoadXML_button_Click(object sender, EventArgs e)
+        {
+            ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string path = ofd.FileName; //ścieżka do pliku 
+                XmlSerializer ser = new XmlSerializer(typeof(List<Book>));
+                StreamReader reader= new StreamReader(path);
+                Book_list = (List<Book>)ser.Deserialize(reader);
+                reader.Close();
+                while(dataGridView1.Rows.Count > 0)
+                {
+                    dataGridView1.Rows.RemoveAt(0);
+                }
+                for(int i = 0; i < Book_list.Count; i++)
+                {
+                    //????
+                    Book_list.Add(new Book(book1.title, book1.author, book1.genres, book1.stars, book1.price));
+                    dataGridView1.Rows.Add(Book_list.Last().title, Book_list.Last().author, Book_list.Last().genres, Book_list.Last().stars, Book_list.Last().price);
+                    row_counter++;
+                }
+
+            }
+
+           
         }
     }
 }

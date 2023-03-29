@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     public partial class Form2 : Form
     {
         Form1 okno;
-        string title, author, genres, stars, price;
+        //string title, author, genres, stars, price;
         
 
         public Form2(Form1 serio_okno)

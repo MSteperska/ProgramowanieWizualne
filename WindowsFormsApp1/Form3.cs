@@ -28,6 +28,7 @@ namespace WindowsFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            dataGridView2.Rows.Clear();
             text = textBox1.Text;
         }
         
@@ -36,12 +37,15 @@ namespace WindowsFormsApp1
             for(int i = 0; i < form.Book_list.Count; i++)
             {
                 
-                    if (form.Book_list[i].title.Contains(text) || form.Book_list[i].author.Contains(text)
+                if (form.Book_list[i].title.Contains(text) || form.Book_list[i].author.Contains(text)
                         || form.Book_list[i].genres.Contains(text) || form.Book_list[i].stars.Contains(text)
                          || form.Book_list[i].price.Contains(text))
-                    {
-                        dataGridView2.Rows.Add(form.Book_list[i]);
-                    }             
+                {
+
+                    dataGridView2.Rows.Add(form.Book_list[i].title, form.Book_list[i].author, form.Book_list[i].genres,
+                    form.Book_list[i].stars, form.Book_list[i].price);
+                }
+                
                 
             }
             

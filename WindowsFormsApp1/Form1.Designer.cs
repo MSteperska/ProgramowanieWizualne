@@ -162,6 +162,7 @@
             this.SaveXML_button.TabIndex = 6;
             this.SaveXML_button.Text = "SAVE TO .XML";
             this.SaveXML_button.UseVisualStyleBackColor = true;
+            this.SaveXML_button.Click += new System.EventHandler(this.SaveXML_button_Click);
             // 
             // LoadXML_button
             // 
@@ -171,6 +172,7 @@
             this.LoadXML_button.TabIndex = 7;
             this.LoadXML_button.Text = "LOAD FROM .XML";
             this.LoadXML_button.UseVisualStyleBackColor = true;
+            this.LoadXML_button.Click += new System.EventHandler(this.LoadXML_button_Click);
             // 
             // Form1
             // 

@@ -31,7 +31,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.load_button = new System.Windows.Forms.Button();
             this.onlygreen_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.negatyw_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,21 +65,22 @@
             this.onlygreen_button.UseVisualStyleBackColor = true;
             this.onlygreen_button.Click += new System.EventHandler(this.onlygreen_button_Click);
             // 
-            // button1
+            // negatyw_button
             // 
-            this.button1.Location = new System.Drawing.Point(438, 128);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 42);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.negatyw_button.Location = new System.Drawing.Point(438, 128);
+            this.negatyw_button.Name = "negatyw_button";
+            this.negatyw_button.Size = new System.Drawing.Size(136, 42);
+            this.negatyw_button.TabIndex = 3;
+            this.negatyw_button.Text = "Negatyw";
+            this.negatyw_button.UseVisualStyleBackColor = true;
+            this.negatyw_button.Click += new System.EventHandler(this.negatyw_button_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.negatyw_button);
             this.Controls.Add(this.onlygreen_button);
             this.Controls.Add(this.load_button);
             this.Controls.Add(this.pictureBox1);
@@ -95,6 +96,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button load_button;
         private System.Windows.Forms.Button onlygreen_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button negatyw_button;
     }
 }

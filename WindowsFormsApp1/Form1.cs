@@ -63,6 +63,27 @@ namespace WindowsFormsApp1
 
         }
 
-       
+        private void negatyw_button_Click(object sender, EventArgs e)
+        {
+            int width = bmp.Width;
+            int height = bmp.Height;
+            int r, g, b, a;
+            Color col;
+
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    col = bmp.GetPixel(x, y);
+                    r = col.R;
+                    g = col.G;
+                    b = col.B;
+                    a = col.A;
+                    bmp.SetPixel(x, y, Color.FromArgb(255 - a, 255 - r, 255 - g, 255 - b));
+                }
+            }
+            pictureBox1.Image = bmp;
+
+        }
     }
 }

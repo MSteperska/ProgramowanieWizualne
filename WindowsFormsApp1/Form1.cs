@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -83,6 +84,35 @@ namespace WindowsFormsApp1
                 }
             }
             pictureBox1.Image = bmp;
+        }
+
+        private void rotate_button_Click(object sender, EventArgs e)
+        {
+            if(pictureBox1.Image != null)
+            {
+                bmp.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                pictureBox1.Image = bmp;
+            }
+                      
+        }
+
+        private void mirror1_button_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                bmp.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                pictureBox1.Image = bmp;
+            }
+        }
+
+        private void mirror2_button_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                bmp.RotateFlip(RotateFlipType.RotateNoneFlipX);
+                pictureBox1.Image = bmp;
+            }
+            
 
         }
     }

@@ -30,8 +30,14 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.load_button = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.onlygreen_button = new System.Windows.Forms.Button();
             this.negatyw_button = new System.Windows.Forms.Button();
+========
+            this.rotate_button = new System.Windows.Forms.Button();
+            this.mirror1_button = new System.Windows.Forms.Button();
+            this.mirror2_button = new System.Windows.Forms.Button();
+>>>>>>> move
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +61,7 @@
             this.load_button.UseVisualStyleBackColor = true;
             this.load_button.Click += new System.EventHandler(this.button1_Click);
             // 
+<<<<<<< HEAD
             // onlygreen_button
             // 
             this.onlygreen_button.Location = new System.Drawing.Point(438, 57);
@@ -74,14 +81,51 @@
             this.negatyw_button.Text = "Negatyw";
             this.negatyw_button.UseVisualStyleBackColor = true;
             this.negatyw_button.Click += new System.EventHandler(this.negatyw_button_Click);
+=======
+            // rotate_button
+            // 
+            this.rotate_button.Location = new System.Drawing.Point(413, 132);
+            this.rotate_button.Name = "rotate_button";
+            this.rotate_button.Size = new System.Drawing.Size(176, 62);
+            this.rotate_button.TabIndex = 2;
+            this.rotate_button.Text = "Obróć";
+            this.rotate_button.UseVisualStyleBackColor = true;
+            this.rotate_button.Click += new System.EventHandler(this.rotate_button_Click);
+            // 
+            // mirror1_button
+            // 
+            this.mirror1_button.Location = new System.Drawing.Point(413, 212);
+            this.mirror1_button.Name = "mirror1_button";
+            this.mirror1_button.Size = new System.Drawing.Size(176, 61);
+            this.mirror1_button.TabIndex = 3;
+            this.mirror1_button.Text = "Lustrzane odbicie 1";
+            this.mirror1_button.UseVisualStyleBackColor = true;
+            this.mirror1_button.Click += new System.EventHandler(this.mirror1_button_Click);
+            // 
+            // mirror2_button
+            // 
+            this.mirror2_button.Location = new System.Drawing.Point(413, 291);
+            this.mirror2_button.Name = "mirror2_button";
+            this.mirror2_button.Size = new System.Drawing.Size(176, 57);
+            this.mirror2_button.TabIndex = 4;
+            this.mirror2_button.Text = "Lustrzane odbicie 2";
+            this.mirror2_button.UseVisualStyleBackColor = true;
+            this.mirror2_button.Click += new System.EventHandler(this.mirror2_button_Click);
+>>>>>>> move
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
             this.Controls.Add(this.negatyw_button);
             this.Controls.Add(this.onlygreen_button);
+=======
+            this.Controls.Add(this.mirror2_button);
+            this.Controls.Add(this.mirror1_button);
+            this.Controls.Add(this.rotate_button);
+>>>>>>> move
             this.Controls.Add(this.load_button);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
@@ -95,7 +139,13 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button load_button;
+<<<<<<< HEAD
         private System.Windows.Forms.Button onlygreen_button;
         private System.Windows.Forms.Button negatyw_button;
+=======
+        private System.Windows.Forms.Button rotate_button;
+        private System.Windows.Forms.Button mirror1_button;
+        private System.Windows.Forms.Button mirror2_button;
+>>>>>>> move
     }
 }

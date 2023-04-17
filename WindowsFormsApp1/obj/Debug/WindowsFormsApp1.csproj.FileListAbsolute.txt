@@ -12,7 +12,6 @@ C:\Users\student\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Window
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
-M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -21,4 +20,3 @@ M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.p
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-M:\Studia\4\Programowanie wizualne\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
